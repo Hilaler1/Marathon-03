@@ -20,10 +20,10 @@ public class AccountDao implements IRepository<Account> {
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Some problem occured while adding account data.");
-		} finally { 
+		} finally {
 			session.close();
 		}
- 
+
 	}
 
 	@Override

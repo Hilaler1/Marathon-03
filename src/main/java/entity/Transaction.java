@@ -28,7 +28,7 @@ public class Transaction {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long oid;
-	@Column(name="no",nullable = false)
+	@Column(name="no",nullable = false, unique = true)
 	private long no;
 	@Column(name="transaction_date_time")
 	private LocalDate date;

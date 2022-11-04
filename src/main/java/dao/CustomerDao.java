@@ -9,22 +9,20 @@ public class CustomerDao implements IRepository<Customer> {
 	public void update(Customer entity) {
 		Session session = null;
 		try {
-		session = databaseConnection();
+			session = databaseConnection();
 			session.getTransaction().begin();
 			session.merge(entity);
 			session.getTransaction().commit();
 			System.out.println("succesfully updated");
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("Some problem occured while UPDATING Book data.");
+			System.out.println("Some problem occured while UPDATING Customer data.");
 		} finally {
 			session.close();
 		}
 
 	}
-	
-	
-	
+
 	@Override
 	public void create(Customer entity) {
 		Session session = null;
@@ -42,7 +40,7 @@ public class CustomerDao implements IRepository<Customer> {
 		} finally {
 			session.close();
 		}
- 
+
 	}
 
 	@Override
